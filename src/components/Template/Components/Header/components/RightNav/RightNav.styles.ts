@@ -1,9 +1,6 @@
 import styled from 'styled-components';
-import GeneralStyles from '@styles/themes/default';
 
-const { mediaQuery } = GeneralStyles;
-
-export const Ul = styled.ul`
+export const Ul = styled.ul<{ open: Boolean }>`
   list-style: none;
   display: flex;
   flex-flow: row nowrap;

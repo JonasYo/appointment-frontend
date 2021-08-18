@@ -1,18 +1,25 @@
-const PersistMode = {
+type persistModeOptions = {
+  [key: string]: () => Storage;
+};
+
+const PersistMode: persistModeOptions = {
   localStorage: () => localStorage,
   sessionStorage: () => sessionStorage,
 };
 
-const getFromStorage = (key, type = 'sessionStorage') => {
+const getFromStorage = (key: string, type = 'sessionStorage') => {
   try {
     const persist = PersistMode[type]();
-    return JSON.parse(persist.getItem(key));
+
+    const result = persist.getItem(key) || '';
+
+    return JSON.parse(result);
   } catch (error) {
     return null;
   }
 };
 
-const setInStorage = (key, value, type = 'sessionStorage') => {
+const setInStorage = (key: string, value: any, type = 'sessionStorage') => {
   if (!key || !value) {
     return;
   }
@@ -21,11 +28,11 @@ const setInStorage = (key, value, type = 'sessionStorage') => {
   persist.setItem(key, JSON.stringify(value));
 };
 
-const removeFromStorageIfExists = (key, type = 'sessionStorage') => {
+const removeFromStorageIfExists = (key: string, type = 'sessionStorage') => {
   if (getFromStorage(key, type)) removeFromStorage(key, type);
 };
 
-const removeFromStorage = (key, type = 'sessionStorage') => {
+const removeFromStorage = (key: string, type = 'sessionStorage') => {
   const persist = PersistMode[type]();
   persist.removeItem(key);
 };

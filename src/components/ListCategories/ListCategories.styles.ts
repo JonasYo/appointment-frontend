@@ -37,7 +37,7 @@ export const Ul = styled.ul`
   }
 `;
 
-export const Li = styled.li`
+export const Li = styled.li<{ isSelected: Boolean }>`
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,9 +1,8 @@
 import React, { InputHTMLAttributes, useEffect, useRef, useState, useCallback } from 'react';
+import { useField } from '@unform/core';
 
 import { IconBaseProps } from 'react-icons';
 import { FiAlertCircle } from 'react-icons/fi';
-
-import { useField } from '@unform/core';
 
 import { Container, InputStyled, Error } from './Input.styles';
 
@@ -48,7 +47,7 @@ const Input = ({ name, containerStyle = {}, icon: Icon, ...rest }: InputProps) =
         onBlur={handleInputBlur}
         defaultValue={defaultValue}
         ref={inputRef}
-        autocomplete="new-password"
+        autoComplete="new-password"
         {...rest}
       />
 

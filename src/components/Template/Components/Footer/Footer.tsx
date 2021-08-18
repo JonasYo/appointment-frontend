@@ -4,10 +4,10 @@ import { Container, Copyright } from './Footer.styles';
 
 const Footer = () => (
   <Container>
-    <Copyright fadeIn>
+    <Copyright>
       Desenvolvido por <b>Jonas Siqueira Marcelino</b>
     </Copyright>
-    <Copyright fadeIn>© Copyright 2021.</Copyright>
+    <Copyright>© Copyright 2021.</Copyright>
   </Container>
 );
 

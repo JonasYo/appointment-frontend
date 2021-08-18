@@ -21,7 +21,7 @@ interface Props {
 
 const Calendar = ({ selectedDate, setSelectedDate }: Props) => {
   const [startDate, setStartDate] = useState(moment().startOf('week'));
-  const [dates, setDates] = useState([]);
+  const [dates, setDates] = useState<any>([]);
 
   useEffect(() => {
     const tempDates = [];
@@ -52,7 +52,7 @@ const Calendar = ({ selectedDate, setSelectedDate }: Props) => {
       </MonthWrapper>
 
       <DatesWrapper>
-        {dates.map((date, index) => (
+        {dates.map((date: any, index: any) => (
           <DayWrapper key={index} onClick={() => setSelectedDate(date)}>
             <Weekday>{date.format('ddd')}</Weekday>
 

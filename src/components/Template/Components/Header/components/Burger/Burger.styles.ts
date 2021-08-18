@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledBurger = styled.div`
+export const StyledBurger = styled.div<{ open: Boolean }>`
   width: 3rem;
   height: 2.5rem;
   position: fixed;

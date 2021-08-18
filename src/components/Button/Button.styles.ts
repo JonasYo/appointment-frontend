@@ -1,7 +1,11 @@
 import styled, { css } from 'styled-components';
 
+interface ButtonProps {
+  primary?: boolean;
+}
+
 const Container = styled.button`
-  ${({ theme: { mediaQuery, font, colors } }) => css`
+  ${({ theme: { mediaQuery, font, colors } }) => css<ButtonProps>`
     cursor: pointer;
     background: ${({ primary }) => (primary ? colors.purple : colors.white)};
     color: ${({ primary }) => (primary ? colors.white : colors.purple)};

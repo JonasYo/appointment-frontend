@@ -12,7 +12,7 @@ const Categories = ({ listCategories, categorySelected, setCategorySelected }: P
   return (
     <Container>
       <Ul>
-        {listCategories.map((item, index) => (
+        {listCategories.map((item: any, index: number) => (
           <Li
             key={index}
             onClick={() => setCategorySelected(item)}

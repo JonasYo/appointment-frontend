@@ -8,7 +8,6 @@ import Input from './Input';
 import Template from './Template';
 import Calendar from './Calendar';
 import Tooltip from './Tooltip';
-import Select from './Select';
 import ListCategories from './ListCategories';
 import Schedule from './Schedule';
 import Card from './Card';
@@ -21,7 +20,6 @@ export {
   Template,
   Calendar,
   Tooltip,
-  Select,
   ListCategories,
   Schedule,
   Card,

@@ -19,7 +19,6 @@
     "ts:check": "tsc --noEmit"
   },
   "dependencies": {
-    "@netlify/plugin-nextjs": "^3.8.0",
     "@unform/core": "^2.1.6",
     "@unform/web": "^2.1.6",
     "axios": "^0.21.1",
